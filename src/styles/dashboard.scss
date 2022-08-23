@@ -58,13 +58,21 @@
             padding: 1.5rem;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             h3 {
                 width: calc(100% / 3);
                 color: $grey;
                 text-align: left;
                 text-transform: uppercase;
                 font-weight: 500;
+              }
+              button{
+                background: $blue;
+                color: $white;
+                text-transform: uppercase;
+                border-radius: 5px;
+                padding: 0.5rem;
+                border: none;
               }
         }
         #loading-container{

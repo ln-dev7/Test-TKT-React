@@ -12,6 +12,7 @@ export default function Dashboard() {
     fetch(urlBiz)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         setData(data);
         setLoading(false);
       })
@@ -69,7 +70,7 @@ export default function Dashboard() {
               <div className="dashboard-company__table-item">
                 <h3>{item.name}</h3>
                 <h3>{item.siren}</h3>
-                <h3>{item.category}</h3>
+                <button>{item.sector}</button>
               </div>
             );
           })}
