@@ -1,0 +1,9 @@
+.dashboard-company{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    &-container{
+        width: calc(100% - 300px);
+    min-height: 100vh;
+    }
+}
