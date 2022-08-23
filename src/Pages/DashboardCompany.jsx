@@ -5,7 +5,9 @@ export default function DashboardCompany() {
   return (
     <div className="dashboard-compnay">
       <SideBar />
-      <div className="dashboard-compnay-container">DashboardCompany</div>
+      <div className="dashboard-compnay-container">
+        
+      </div>
     </div>
   );
 }
