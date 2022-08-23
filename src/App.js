@@ -1,6 +1,6 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
-import DashboardCompany from "./Pages/DashboardCompany";
+import DashboardCompany from "./Pages/Company";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard/company" element={<DashboardCompany />} />
+          <Route path="/company/:id" element={<DashboardCompany />} />
         </Routes>
       </BrowserRouter>
     </>
