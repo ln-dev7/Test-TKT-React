@@ -1,11 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function SideBar() {
+export function SideBar() {
+  const handleOpen = () => {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("show");
+  }
   return (
     <div className="sidebar">
-      <div className="sidebar-logo">
+      <div className="sidebar-top">
         <svg
+        className="sidebar-top__logo"
           width="80"
           height="40"
           viewBox="0 0 80 40"
@@ -56,6 +61,8 @@ export default function SideBar() {
             fill="#4E59FF"
           />
         </svg>
+
+        <svg onClick={handleOpen} className="sidebar-top__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-11.414L9.172 7.757 7.757 9.172 10.586 12l-2.829 2.828 1.415 1.415L12 13.414l2.828 2.829 1.415-1.415L13.414 12l2.829-2.828-1.415-1.415L12 10.586z" fill="rgba(78,89,255,1)"/></svg>
       </div>
       <div className="sidebar-links">
         <NavLink to="/">
@@ -124,6 +131,158 @@ export default function SideBar() {
           <h2>Sophie L</h2>
           <h3>sophie.l@gmail.com</h3>
         </div>
+      </div>
+    </div>
+  );
+}
+
+export function SideBarMobile() {
+  const handleClose = () => {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.classList.toggle("show");
+  }
+  return (
+    <div className="sidebarM">
+      <div className="sidebarM-logo">
+        <svg
+          width="40"
+          height="22"
+          viewBox="0 0 40 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_1682_6429)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 0.969788H5.00573V21.0302C2.24114 21.0302 0 18.7881 0 16.0224V0.969788Z"
+              fill="#4E59FF"
+            />
+            <path
+              d="M10.0115 16.0224H5.00574V21.0302H10.0115V16.0224Z"
+              fill="#4E59FF"
+            />
+            <path
+              d="M10.0115 6.13318H5.00574V11.141H10.0115V6.13318Z"
+              fill="#4E59FF"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M30.0319 0.969788H35.0376V21.0302C32.2731 21.0302 30.0319 18.7881 30.0319 16.0224V0.969788Z"
+              fill="#4E59FF"
+            />
+            <path
+              d="M40.0434 16.0224H35.0377V21.0302H40.0434V16.0224Z"
+              fill="#4E59FF"
+            />
+            <path
+              d="M40.0434 6.13318H35.0377V11.141H40.0434V6.13318Z"
+              fill="#4E59FF"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12.5143 0.969788H17.5201V21.0302C14.7555 21.0302 12.5143 18.7881 12.5143 16.0224V0.969788Z"
+              fill="#4E59FF"
+            />
+            <path d="M22.5233 11H17.5176V16.0078H22.5233V11Z" fill="#4E59FF" />
+            <path
+              d="M27.5291 16.0078H22.5234V21.0156H27.5291V16.0078Z"
+              fill="#4E59FF"
+            />
+            <path
+              d="M27.5291 5.99219H22.5234V11H27.5291V5.99219Z"
+              fill="#4E59FF"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1682_6429">
+              <rect
+                width="40"
+                height="20.0604"
+                fill="white"
+                transform="translate(0 0.969788)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div className="sidebarM-menu" onClick={handleClose}>
+        <svg
+          width="82"
+          height="82"
+          viewBox="0 0 82 82"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d_1682_6441)">
+            <rect
+              x="20"
+              y="14"
+              width="42"
+              height="42"
+              rx="21"
+              fill="url(#paint0_linear_1682_6441)"
+              shape-rendering="crispEdges"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M31.25 28C31.25 27.5858 31.5858 27.25 32 27.25H40C40.4142 27.25 40.75 27.5858 40.75 28C40.75 28.4142 40.4142 28.75 40 28.75H32C31.5858 28.75 31.25 28.4142 31.25 28ZM31.25 35C31.25 34.5858 31.5858 34.25 32 34.25H45C45.4142 34.25 45.75 34.5858 45.75 35C45.75 35.4142 45.4142 35.75 45 35.75H32C31.5858 35.75 31.25 35.4142 31.25 35ZM32 41.25C31.5858 41.25 31.25 41.5858 31.25 42C31.25 42.4142 31.5858 42.75 32 42.75H50C50.4142 42.75 50.75 42.4142 50.75 42C50.75 41.5858 50.4142 41.25 50 41.25H32Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_1682_6441"
+              x="0"
+              y="0"
+              width="82"
+              height="82"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="6" />
+              <feGaussianBlur stdDeviation="10" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.0196078 0 0 0 0 0.215686 0 0 0 0 0.611765 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_1682_6441"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_1682_6441"
+                result="shape"
+              />
+            </filter>
+            <linearGradient
+              id="paint0_linear_1682_6441"
+              x1="41.2734"
+              y1="2.12767"
+              x2="61.5719"
+              y2="61.1184"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#01F2CF" />
+              <stop offset="0.0001" stop-color="#99ACFF" />
+              <stop offset="1" stop-color="#4E6EFC" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </div>
   );

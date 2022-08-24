@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SideBar from "../Components/SideBar";
+import {SideBar, SideBarMobile} from "../Components/SideBar";
 
 export default function Dashboard() {
   const [data, setData] = useState([]);
@@ -15,7 +15,6 @@ export default function Dashboard() {
     fetch(urlBiz)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
         setFilterData(data);
         setLoading(false);
@@ -53,6 +52,7 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
       <SideBar />
+      <SideBarMobile />
       <div className="dashboard-container">
         <div className="dashboard-title">
           <h1>Welcome on TKT dashboard!</h1>

@@ -8,7 +8,16 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 2rem;
-  background: $white;
+  background: $superLightGrey;
+  &-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__close{
+      cursor: pointer;
+    }
+  }
   &-links{
     flex-grow: 1;
     a{
@@ -76,15 +85,33 @@
   }
 }
 
+.sidebarM{
+  display: none;
+}
+
 @media screen and (max-width: 970px) {
   .sidebar{
-    position: absolute;
+    position: fixed;
     left: auto;
+    top: 0;
     right: 0;
     transform: translateX(300px);
     transition: .3s ease;
+    z-index: 3;
     &.show{
       transform: translateX(0);
+    }
+  }
+
+  .sidebarM{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $superLightGrey;
+    padding: 1rem;
+    &-menu{
+      cursor: pointer;
     }
   }
 }
