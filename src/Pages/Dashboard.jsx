@@ -9,7 +9,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   const urlBiz = "https://test.wertkt.com/api/biz/";
-  const urlResult = "https://test.wertkt.com/api/result/";
+  // const urlResult = "https://test.wertkt.com/api/result/";
 
   useEffect(() => {
     fetch(urlBiz)
